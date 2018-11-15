@@ -7,12 +7,12 @@ module.exports = ms => {
 	const roundTowardsZero = ms > 0 ? Math.floor : Math.ceil;
 
 	return {
-		days: roundTowardsZero(ms / 86400000),
-		hours: roundTowardsZero(ms / 3600000) % 24,
-		minutes: roundTowardsZero(ms / 60000) % 60,
-		seconds: roundTowardsZero(ms / 1000) % 60,
-		milliseconds: roundTowardsZero(ms) % 1000,
-		microseconds: roundTowardsZero(ms * 1000) % 1000,
-		nanoseconds: roundTowardsZero(ms * 1e6) % 1000
+		days: roundTowardsZero(ms / 864e5),
+		hours: roundTowardsZero(ms / 36e5) % 24,
+		minutes: roundTowardsZero(ms / 6e4) % 60,
+		seconds: roundTowardsZero(ms / 1e3) % 60,
+		milliseconds: roundTowardsZero(ms) % 1e3,
+		microseconds: roundTowardsZero(ms * 1e3) % 1e3,
+		nanoseconds: roundTowardsZero(ms * 1e6) % 1e3
 	};
 };
